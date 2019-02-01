@@ -58,22 +58,34 @@ def is_prime(n):
 
 def test_count_primes():
     ###############################################################################
-    # TODO: 2  READ the doc-string for the count_primes function below,
+    # DONE: 2  READ the doc-string for the count_primes function below,
     #   but DO NOT begin coding.
     # After you have READ this, change its _TODO_ to DONE.
     ###############################################################################
     print('#######################################')
     print('Test 1 of count primes')
-    print('m = 1 and n = 3')
-    print('Expected count = 2')
-    print('Actual count = ', count_primes(1, 3))
+    print('m = 7 and n = 15')
+    print('Expected count = 3')
+    print('Actual count = ', count_primes(7, 15))
 
     ###############################################################################
-    #   TODO: 3. Add the additional test cases for this function below
+    #   DONE: 3. Add the additional test cases for this function below
     # After you have coded this, change its _TODO_ to DONE.
     ###############################################################################
+    #Test 2:
     print()
-    print('Your tests will go here!')
+    print('Test 2 of count primes')
+    print('m = 2 and n = 4')
+    print('Expected count = 2')
+    print('Actual count =',count_primes(2,4))
+
+    #Test 3:
+    print()
+    print('Test 3 of count primes')
+    print('m = 2 and n = 10')
+    print('Expected count = 4')
+    print('Actual count =', count_primes(2,10))
+
     return
 
 
@@ -115,11 +127,15 @@ def count_primes(m,n):
     #     second and third examples above
     """
     ################################################################################
-    #   TODO: 4. Write the function count_primes(m,n) below here
+    #   DONE: 4. Write the function count_primes(m,n) below here
     # After you have coded and tested, change its _TODO_ to DONE.
     ################################################################################
-
-    return
+    count = 0
+    for k in range (m,n+1):
+        if is_prime(k):
+            print(k)
+            count = count +1
+    return count
 
 
 def test_multiply_primes():
